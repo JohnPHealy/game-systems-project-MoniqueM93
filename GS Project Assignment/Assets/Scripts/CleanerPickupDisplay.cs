@@ -16,7 +16,7 @@ public class CleanerPickupDisplay : MonoBehaviour
     void Update()
     {
         if (cleanerAmount > 0)
-            text.text = "Sanitizer: " + cleanerAmount;
+            text.text = "Sanitizer: " + cleanerAmount + "%";
         else
             text.text = "Out of Sanitizer";
     }
