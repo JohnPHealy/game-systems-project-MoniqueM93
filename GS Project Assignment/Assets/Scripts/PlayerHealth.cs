@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -14,7 +15,13 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (PlayerHealthDisplay.healthLevel < 5)
+        {
+            SceneManager.LoadScene(3);
+            CleanerPickupDisplay.cleanerAmount = 0;
+            MaskPickUpDisplay.maskAmount = 0;
+            PlayerHealthDisplay.healthLevel = 100;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

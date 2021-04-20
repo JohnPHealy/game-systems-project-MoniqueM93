@@ -713,6 +713,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8470970802512713637}
     m_Modifications:
+    - target: {fileID: 3883737707707759588, guid: 77d6e0e71d2cf5c41877793459275528, type: 3}
+      propertyPath: speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883737707707759588, guid: 77d6e0e71d2cf5c41877793459275528, type: 3}
+      propertyPath: lifetime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5564976559882437511, guid: 77d6e0e71d2cf5c41877793459275528, type: 3}
       propertyPath: m_Name
       value: SprayParticle (6)

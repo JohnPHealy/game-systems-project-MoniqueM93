@@ -11,6 +11,7 @@ TagManager:
   - FlyMask
   - SprayParts
   - EnemySneeze
+  - HealthBoost
   layers:
   - Default
   - TransparentFX

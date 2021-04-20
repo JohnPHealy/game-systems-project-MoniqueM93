@@ -9,6 +9,8 @@ public class PlayerScript : MonoBehaviour
     public float acceleration;
     public float currentSpeed;
     public float veritcalSpeed;
+    public float jumpForce;
+    public bool grounded;
     public Transform animatorGO;
     float animatorGOInitial;
     Animator anim;
@@ -42,6 +44,13 @@ public class PlayerScript : MonoBehaviour
         }
         //end of flipping animator
 
+        //jump code starts
+        if (Input.GetKeyDown("space") && grounded == true)
+        {
+            myRB.AddForce(new Vector2(0, jumpForce));
+        }
+        //jump code ends
+
         if (Mathf.Abs(currentSpeed) < maxSpeed)
         {
             myRB.AddRelativeForce(new Vector2(move * acceleration, 0));
@@ -53,4 +62,27 @@ public class PlayerScript : MonoBehaviour
         //anim.SetFloat("vspeed", veritcalSpeed);
         //end of animator speed
     }
+
+    //grounded check
+//    void OnTriggerStay2D(Collider2D collision)
+//    {
+//        if (collision.gameObject.tag != "Player")
+//        {
+//            grounded = true;
+ //           anim.SetBool("grounded", true);
+//        }
+//    }
+
+//    private void OnTriggerExit2D(Collider2D collision)
+//    {
+//        if (collision.gameObject.tag != "Player")
+//        {
+//            grounded = false;
+//            anim.SetBool("grounded", false);
+//        }
+//    }
+
+    // Grounded ends
+
+
 }
