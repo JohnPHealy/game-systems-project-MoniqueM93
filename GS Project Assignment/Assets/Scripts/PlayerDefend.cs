@@ -8,6 +8,8 @@ public class PlayerDefend : MonoBehaviour
     public Transform throwPoint;
     public bool hasMasks = false;
     public bool hasCleaner = false;
+    public GameObject sprayPump;
+    public Transform pumpPoint;
 
     // Update is called once per frame
     void Update()
@@ -15,6 +17,11 @@ public class PlayerDefend : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             maskThrow();
+        }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            cleanerSpray();
         }
 
         if (CleanerPickupDisplay.cleanerAmount > 0)
@@ -43,5 +50,14 @@ public class PlayerDefend : MonoBehaviour
 
         MaskPickUpDisplay.maskAmount -= 1;
         Instantiate(maskToss, throwPoint);
+    }
+
+    void cleanerSpray()
+    {
+        if (!hasCleaner)
+            return;
+
+        CleanerPickupDisplay.cleanerAmount -= 5;
+        Instantiate(sprayPump, pumpPoint);
     }
 }

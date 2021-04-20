@@ -9,6 +9,8 @@ TagManager:
   - Mask
   - Cleaner
   - FlyMask
+  - SprayParts
+  - EnemySneeze
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,7 @@ public class EnemyScript : MonoBehaviour
 {
     public bool isSick = true;
 
-    // Start is called before the first frame update
+    // Start is called efore the first frame update
     void Start()
     {
         
@@ -20,9 +20,15 @@ public class EnemyScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("MaskToss"))
+        if (collision.gameObject.tag.Equals("FlyMask"))
         {
+            print("hit");
             isSick = false;
+        }
+
+        if (collision.gameObject.tag.Equals("Player") && isSick == true)
+        {
+            PlayerHealthDisplay.healthLevel -= 10;
         }
     }
 }
