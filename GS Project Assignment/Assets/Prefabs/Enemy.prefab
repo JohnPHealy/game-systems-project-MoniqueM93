@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 33822522857484705}
   - component: {fileID: 33822522857484706}
   - component: {fileID: 33822522857484718}
-  - component: {fileID: 428972103}
+  - component: {fileID: 156195575}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -65,7 +65,7 @@ MonoBehaviour:
   isSick: 1
   sneeze: {fileID: 1584596468541891485, guid: 6bd91095cdcef32448a2f02903704b5e, type: 3}
   maskedEnemy: {fileID: -520095435369411765, guid: cf3bda366ee6ecf4f9af8447f99d6dc0, type: 3}
---- !u!212 &428972103
+--- !u!212 &156195575
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

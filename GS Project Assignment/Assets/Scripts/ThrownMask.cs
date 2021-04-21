@@ -19,7 +19,7 @@ public class ThrownMask : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        maskRB.velocity = transform.right * transform.localScale.x * speed;
+        maskRB.velocity = transform.forward * transform.localScale.x * speed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
