@@ -58,8 +58,8 @@ public class PlayerScript : MonoBehaviour
         // end of left and right code
 
         //animator speed
-        //anim.SetFloat("speed", Mathf.Abs(currentSpeed + move));
-        //anim.SetFloat("vspeed", veritcalSpeed);
+        anim.SetFloat("speed", Mathf.Abs(currentSpeed + move));
+        anim.SetFloat("vspeed", veritcalSpeed);
         //end of animator speed
     }
 

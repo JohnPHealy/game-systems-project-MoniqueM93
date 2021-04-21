@@ -8,6 +8,7 @@ public class EnemyScript : MonoBehaviour
     public GameObject sneeze;
     float fireRate;
     float nextFire;
+    public Sprite maskedEnemy;
 
     // Start is called efore the first frame update
     void Start()
@@ -31,6 +32,7 @@ public class EnemyScript : MonoBehaviour
         {
             print("hit");
             isSick = false;
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = maskedEnemy;
         }
 
         if (collision.gameObject.tag.Equals("Player") && isSick == true)
