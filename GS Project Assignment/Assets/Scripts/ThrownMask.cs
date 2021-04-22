@@ -8,8 +8,7 @@ public class ThrownMask : MonoBehaviour
     public Rigidbody2D maskRB;
     public GameObject thrownMask;
     public float lifetime = 1f;
-    public Transform maskStartingPoint;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +18,7 @@ public class ThrownMask : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        maskRB.velocity = transform.forward * transform.localScale.x * speed;
+        maskRB.velocity = transform.right * transform.localScale.x * speed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

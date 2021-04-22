@@ -9,7 +9,7 @@ public class PlayerDefend : MonoBehaviour
     public bool hasMasks = false;
     public bool hasCleaner = false;
     public GameObject sprayPump;
-    public Transform pumpPoint;
+ 
 
     // Update is called once per frame
     void Update()
@@ -49,7 +49,7 @@ public class PlayerDefend : MonoBehaviour
             return;
 
         MaskPickUpDisplay.maskAmount -= 1;
-        Instantiate(maskToss, throwPoint);
+        Instantiate(maskToss, throwPoint.position, Quaternion.identity);
     }
 
     void cleanerSpray()
@@ -58,6 +58,6 @@ public class PlayerDefend : MonoBehaviour
             return;
 
         CleanerPickupDisplay.cleanerAmount -= 5;
-        Instantiate(sprayPump, pumpPoint);
+        Instantiate(sprayPump, throwPoint.position, Quaternion.identity);
     }
 }
