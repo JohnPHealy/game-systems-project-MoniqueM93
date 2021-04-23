@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SprayParticleScript : MonoBehaviour
 {
-    public float speed = 30f;
+    public float speed = 7.5f;
+    public float spraySpeed = 5;
     public Rigidbody2D particleRB;
     public GameObject flyingParticle;
     public float lifetime = 8f;
@@ -18,7 +19,7 @@ public class SprayParticleScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        particleRB.velocity = transform.right * transform.localScale.x * speed;
+        particleRB.velocity = transform.right * transform.localScale.x * speed * spraySpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

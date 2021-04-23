@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ThrownMask : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 7.5f;
+    public float flySpeed = 5;
     public Rigidbody2D maskRB;
     public GameObject thrownMask;
     public float lifetime = 1f;
@@ -18,7 +19,7 @@ public class ThrownMask : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        maskRB.velocity = transform.right * transform.localScale.x * speed;
+        maskRB.velocity = transform.right * transform.localScale.x * speed * flySpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

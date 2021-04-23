@@ -55,6 +55,7 @@ public class PlayerScript : MonoBehaviour
         {
             myRB.AddRelativeForce(new Vector2(move * acceleration, 0));
         }
+
         // end of left and right code
 
         //animator speed

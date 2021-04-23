@@ -4,60 +4,34 @@ using UnityEngine;
 
 public class PlayerDefend : MonoBehaviour
 {
-    public GameObject maskToss;
+    public GameObject maskItem;
     public Transform throwPoint;
     public bool hasMasks = false;
-    public bool hasCleaner = false;
-    public GameObject sprayPump;
- 
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            maskThrow();
-        }
-
-        if (Input.GetButtonDown("Fire2"))
-        {
-            cleanerSpray();
-        }
-
-        if (CleanerPickupDisplay.cleanerAmount > 0)
-        {
-            hasCleaner = true;
-        }
-        else
-        {
-            hasCleaner = false;
+            Shoot();
         }
 
         if (MaskPickUpDisplay.maskAmount > 0)
         {
             hasMasks = true;
-        }
-        else
+        } else
         {
             hasMasks = false;
         }
     }
 
-    void maskThrow()
+    void Shoot()
     {
         if (!hasMasks)
             return;
 
         MaskPickUpDisplay.maskAmount -= 1;
-        Instantiate(maskToss, throwPoint.position, Quaternion.identity);
-    }
-
-    void cleanerSpray()
-    {
-        if (!hasCleaner)
-            return;
-
-        CleanerPickupDisplay.cleanerAmount -= 5;
-        Instantiate(sprayPump, throwPoint.position, Quaternion.identity);
+        GameObject si = Instantiate(maskItem, throwPoint);
+        si.transform.parent = null;
     }
 }
