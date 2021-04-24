@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StorageDoor : MonoBehaviour
+public class LevelDoor : MonoBehaviour
 {
     public bool collisonWithPlayer = false;
     public Sprite closedDoor;
@@ -36,10 +36,10 @@ public class StorageDoor : MonoBehaviour
     {
         if (collisonWithPlayer = true && Input.GetKeyDown(KeyCode.W) && sceneName == "Level1")
         {
-            SceneManager.LoadScene("LevelStorage");
-        } else if (collisonWithPlayer = true && Input.GetKeyDown(KeyCode.W) && sceneName == "LevelStorage")
+            SceneManager.LoadScene("Level2");
+        } else if (collisonWithPlayer = true && Input.GetKeyDown(KeyCode.W) && sceneName == "Level2")
         {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Level3");
         }
     }
 
