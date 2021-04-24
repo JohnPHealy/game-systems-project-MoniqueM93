@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (PlayerHealthDisplay.healthLevel < 5)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
             CleanerPickupDisplay.cleanerAmount = 0;
             MaskPickUpDisplay.maskAmount = 0;
             PlayerHealthDisplay.healthLevel = 100;

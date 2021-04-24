@@ -9,6 +9,7 @@ public class EnemyScript : MonoBehaviour
     float fireRate;
     float nextFire;
     public Sprite maskedEnemy;
+    public AudioSource sneezeSound;
 
     // Start is called efore the first frame update
     void Start()
@@ -47,6 +48,7 @@ public class EnemyScript : MonoBehaviour
         {
             Instantiate(sneeze, transform.position, Quaternion.identity);
             nextFire = Time.time + fireRate;
+            sneezeSound.Play();
         }
     }
 }
