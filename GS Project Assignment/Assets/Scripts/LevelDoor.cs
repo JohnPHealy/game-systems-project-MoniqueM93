@@ -34,7 +34,7 @@ public class LevelDoor : MonoBehaviour
 
     void Update()
     {
-        if (collisonWithPlayer && Input.GetKeyDown(KeyCode.W))
+        if (collisonWithPlayer && Input.GetKeyDown(KeyCode.UpArrow))
         {
             print("hit");
             SceneManager.LoadScene("Level2");
