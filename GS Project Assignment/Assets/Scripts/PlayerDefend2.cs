@@ -7,6 +7,7 @@ public class PlayerDefend2 : MonoBehaviour
     public GameObject sprayItem;
     public Transform throwSprayPoint;
     public bool hasSpray = false;
+    public AudioSource spraySound;
 
     private void Update()
     {
@@ -32,5 +33,7 @@ public class PlayerDefend2 : MonoBehaviour
         CleanerPickupDisplay.cleanerAmount -= 5;
         GameObject si = Instantiate(sprayItem, throwSprayPoint);
         si.transform.parent = null;
+
+        spraySound.Play();
     }
 }

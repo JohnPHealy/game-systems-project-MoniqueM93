@@ -64,26 +64,4 @@ public class PlayerScript : MonoBehaviour
         //end of animator speed
     }
 
-    //grounded check
-//    void OnTriggerStay2D(Collider2D collision)
-//    {
-//        if (collision.gameObject.tag != "Player")
-//        {
-//            grounded = true;
- //           anim.SetBool("grounded", true);
-//        }
-//    }
-
-//    private void OnTriggerExit2D(Collider2D collision)
-//    {
-//        if (collision.gameObject.tag != "Player")
-//        {
-//            grounded = false;
-//            anim.SetBool("grounded", false);
-//        }
-//    }
-
-    // Grounded ends
-
-
 }

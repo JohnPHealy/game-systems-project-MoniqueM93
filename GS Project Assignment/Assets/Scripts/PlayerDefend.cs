@@ -7,6 +7,7 @@ public class PlayerDefend : MonoBehaviour
     public GameObject maskItem;
     public Transform throwPoint;
     public bool hasMasks = false;
+    public AudioSource throwNoise;
 
     // Update is called once per frame
     void Update()
@@ -33,5 +34,7 @@ public class PlayerDefend : MonoBehaviour
         MaskPickUpDisplay.maskAmount -= 1;
         GameObject si = Instantiate(maskItem, throwPoint);
         si.transform.parent = null;
+
+        throwNoise.Play();
     }
 }

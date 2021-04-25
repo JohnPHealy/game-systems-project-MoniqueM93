@@ -216,8 +216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebaabfd8d6ca9c1419357d4ee4bea8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7.5
-  flySpeed: 5
+  speed: 6.5
+  flySpeed: 2
   maskRB: {fileID: 1113827988802724153}
   thrownMask: {fileID: 2182121250474976327}
   lifetime: 1
