@@ -8,6 +8,16 @@ public class StartButton : MonoBehaviour
 {
     public void StartScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Level1");
+    }
+
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene("howto");
+    }
+
+    public void MainMenuScreen()
+    {
+        SceneManager.LoadScene("menu");
     }
 }
