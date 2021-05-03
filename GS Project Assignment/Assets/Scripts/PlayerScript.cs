@@ -14,6 +14,7 @@ public class PlayerScript : MonoBehaviour
     public Transform animatorGO;
     float animatorGOInitial;
     Animator anim;
+    public AudioSource sighSound;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class PlayerScript : MonoBehaviour
         veritcalSpeed = myRB.velocity.y;
 
         //to check for input axis on the keyboard
-        float move = Input.GetAxis("Horizontal");
+        float move = Input.GetAxisRaw("Horizontal");
 
         //flip animator following input
         if (move > 0)
@@ -62,6 +63,14 @@ public class PlayerScript : MonoBehaviour
         anim.SetFloat("speed", Mathf.Abs(currentSpeed + move));
         anim.SetFloat("vspeed", veritcalSpeed);
         //end of animator speed
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Virus"))
+        {
+            sighSound.Play();
+        }
     }
 
 }
