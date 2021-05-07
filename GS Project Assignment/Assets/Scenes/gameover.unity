@@ -219,7 +219,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a78572b261f93c642a16ecf4eb1d9231, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -500,7 +500,7 @@ PrefabInstance:
         are better.
 
 
-        Let''s hope the store has masks.'
+        Let''s hope the store has sanitizer.'
       objectReference: {fileID: 0}
     - target: {fileID: 2674619707010805723, guid: b709087752948ad408363e1015f2cb99, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
